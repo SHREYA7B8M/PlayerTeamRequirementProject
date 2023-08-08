@@ -14,7 +14,7 @@ namespace Player_Team_Requirement_Project
 
             while (true)
             {
-                Console.WriteLine("\nWelcome to Cricket T20 Management System");
+                Console.WriteLine("\nWelcome to Cricket One Day Management System");
                 Console.WriteLine("Enter your choice: \n1: To Add Player \n2: To Remove Player by Id \n3: Get Player By Id \n4: Get Player by Name \n5: Get All Players \n6: Exit");
                 int choice = int.Parse(Console.ReadLine());
 
