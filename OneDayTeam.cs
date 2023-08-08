@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,33 +6,33 @@ using System.Threading.Tasks;
 
 namespace Player_Team_Requirement_Project
 {
-    public class T20Team
+    public class OneDayTeam
     {
-        public static List<Player> T20team = new List<Player>();
+        public static List<Player> oneDay = new List<Player>();
 
-        public T20Team()
+        public OneDayTeam()
         {
-            T20team.Capacity = 11;
+            oneDay.Capacity = 11;
         }
 
         public void Add(Player player)
         {
-            if (T20team.Count >= 11)
+            if (oneDay.Count >= 11)
             {
                 Console.WriteLine("Team is already full. Can't add more players.");
                 return;
             }
 
-            T20team.Add(player);
+            oneDay.Add(player);
             Console.WriteLine("Player added successfully.");
         }
 
         public void Remove(int playerId)
         {
-            Player playerToRemove = T20team.Find(p => p.PlayerId == playerId);
+            Player playerToRemove = oneDay.Find(p => p.PlayerId == playerId);
             if (playerToRemove != null)
             {
-                T20team.Remove(playerToRemove);
+                oneDay.Remove(playerToRemove);
                 Console.WriteLine("Player removed successfully.");
             }
             else
@@ -43,17 +43,17 @@ namespace Player_Team_Requirement_Project
 
         public Player GetPlayerById(int playerId)
         {
-            return T20team.Find(p => p.PlayerId == playerId);
+            return oneDay.Find(p => p.PlayerId == playerId);
         }
 
         public Player GetPlayerByName(string playerName)
         {
-            return T20team.Find(p => p.PlayerName == playerName);
+            return oneDay.Find(p => p.PlayerName == playerName);
         }
 
         public List<Player> GetAllPlayers()
         {
-            return T20team;
+            return oneDay;
         }
     }
 }
