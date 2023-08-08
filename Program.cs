@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +10,7 @@ namespace Player_Team_Requirement_Project
     {
         static void Main(string[] args)
         {
-            T20Team t20Team = new T20Team();
+            OneDayTeam oneDay = new OneDayTeam();
 
             while (true)
             {
@@ -36,19 +36,19 @@ namespace Player_Team_Requirement_Project
                             PlayerName = playerName,
                             PlayerAge = playerAge
                         };
-                        t20Team.Add(newPlayer);
+                        oneDay.Add(newPlayer);
                         break;
 
                     case 2:
                         Console.WriteLine("Enter Player Id to remove:");
                         int playerIdToRemove = int.Parse(Console.ReadLine());
-                        t20Team.Remove(playerIdToRemove);
+                        oneDay.Remove(playerIdToRemove);
                         break;
 
                     case 3:
                         Console.WriteLine("Enter Player Id to retrieve:");
                         int playerIdToRetrieve = int.Parse(Console.ReadLine());
-                        Player retrievedPlayerById = t20Team.GetPlayerById(playerIdToRetrieve);
+                        Player retrievedPlayerById = oneDay.GetPlayerById(playerIdToRetrieve);
                         if (retrievedPlayerById != null)
                             Console.WriteLine($"Player found: Id={retrievedPlayerById.PlayerId}, Name={retrievedPlayerById.PlayerName}, Age={retrievedPlayerById.PlayerAge}");
                         else
@@ -58,7 +58,7 @@ namespace Player_Team_Requirement_Project
                     case 4:
                         Console.WriteLine("Enter Player Name to retrieve:");
                         string playerNameToRetrieve = Console.ReadLine();
-                        Player retrievedPlayerByName = t20Team.GetPlayerByName(playerNameToRetrieve);
+                        Player retrievedPlayerByName = oneDay.GetPlayerByName(playerNameToRetrieve);
                         if (retrievedPlayerByName != null)
                             Console.WriteLine($"Player found: Id={retrievedPlayerByName.PlayerId}, Name={retrievedPlayerByName.PlayerName}, Age={retrievedPlayerByName.PlayerAge}");
                         else
@@ -66,7 +66,7 @@ namespace Player_Team_Requirement_Project
                         break;
 
                     case 5:
-                        var allPlayers = t20Team.GetAllPlayers();
+                        var allPlayers = oneDay.GetAllPlayers();
                         Console.WriteLine("All Players:");
                         foreach (var player in allPlayers)
                         {
