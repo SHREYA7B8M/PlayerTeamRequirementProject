@@ -8,7 +8,7 @@ namespace Player_Team_Requirement_Project
 {
     public class OneDayTeam
     {
-        public static List<Player> t20 = new List<Player>();
+        public static List<Player> oneDay = new List<Player>();
 
         public OneDayTeam()
         {
